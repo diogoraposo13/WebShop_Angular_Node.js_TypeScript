@@ -3,12 +3,11 @@
 class="min-h-full max-w-8xl mx-auto border-x"
 > 
     <mat-drawer mode="side" class="p-6" opened>
-        <div>Filters</div>
+        <app-filters (showCategory)="onShowCategory($event)"></app-filters>
     </mat-drawer>
 
     <mat-drawer-content class="p-6">
         <app-products-header (columnsCountChange)="onColumnsCountChange($event)"></app-products-header>
-        {{cols}}
     </mat-drawer-content>
 
 </mat-drawer-container>
